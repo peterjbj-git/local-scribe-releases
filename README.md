@@ -1,13 +1,19 @@
 # Local Scribe Android
 
-Galaxy S22 (SM-S901N)용 로그인 없는 로컬 음성 키보드입니다.
+로그인 없는 개인 음성 키보드 · Galaxy S22 (SM-S901N)
 
-[최신 APK 다운로드](https://github.com/peterjbj-git/local-scribe-releases/releases/latest/download/LocalScribe-arm64-v8a.apk) · [버전 목록](https://github.com/peterjbj-git/local-scribe-releases/releases)
+[최신 APK 다운로드](https://github.com/peterjbj-git/local-scribe-releases/releases/latest/download/LocalScribe-arm64-v8a.apk) · [배포 기록](https://github.com/peterjbj-git/local-scribe-releases/releases)
 
-기존 앱을 삭제하지 않고 새 APK를 설치하세요. 기존 모델 ZIP·기록·설정이 유지됩니다. 최초 모델 설치는 별도로 제공된 ZIP이 필요합니다.
+## 0.3.0: 내 PC GPU 처리
 
-0.2.0부터 앱 실행 시 하루 한 번 새 버전을 확인합니다. 설정에서 끄거나 수동 확인할 수 있습니다. 다운로드 후 Android 설치 화면에서 사용자가 승인합니다. 업데이트 파일의 SHA-256, 패키지, 버전, 기존 앱 서명을 검사합니다.
+휴대폰에서 녹음하고 개인 PC의 RTX GPU에서 Qwen 음성 인식·문장 정리를 수행합니다. PC 서버와 휴대폰을 같은 공유기에 연결한 뒤, 앱 설정에서 PC 연결 코드를 한 번 등록하세요. 계정 로그인은 필요 없습니다. PC 모드에서는 휴대폰 모델 ZIP이 필요 없습니다. 기존 오프라인 모드도 설정에서 선택할 수 있습니다.
 
-음성·문장·기록은 휴대폰에서 처리하며 업데이트 요청에는 포함하지 않습니다. 업데이트 확인·APK 다운로드 시 GitHub에 네트워크 요청이 발생합니다.
+PC 서버는 별도 실행해야 합니다. 이 APK만 설치하면 서버가 생기는 것은 아닙니다. PC 서버를 준비한 사용자에게 제공된 연결 창 또는 LocalScribe-PC.json 파일을 이용하세요. 연결 코드를 이 공개 저장소에 올리지 마세요. 외부 LTE/5G 접속은 자동으로 제공하지 않습니다.
 
-이 저장소에는 서명된 ARM64 APK와 업데이트 정보만 게시합니다. 앱 소스·서명 키·개인 파일·모델 ZIP은 게시하지 않습니다. 개인 설치용 앱이며 실물 기기 검증 범위는 제한됩니다.
+음성·개인 사전·선택 문장·말투를 등록한 PC로 HTTPS 전송합니다. 휴대폰은 PC 인증서와 연결 키를 확인하며 PC는 음성·결과를 파일로 저장하지 않습니다. 휴대폰의 기록 저장 설정은 유지합니다. GitHub는 앱 업데이트용이며 음성 처리 요청을 받지 않습니다.
+
+## 업데이트
+
+기존 앱을 삭제하지 않고 새 APK를 설치하세요. 기존 모델·기록·설정이 유지됩니다. 0.2.0 이상은 앱 설정의 업데이트 확인을 이용할 수 있습니다. 0.1.0은 새 APK를 직접 설치해야 합니다. 앱 실행 시 하루 한 번 확인하며 설정에서 끌 수 있습니다. 다운로드 후 Android 설치 승인이 필요합니다. SHA-256·패키지·버전·기존 서명을 검사합니다.
+
+서명된 ARM64 APK와 업데이트 정보만 게시합니다. 소스·서명 키·연결 키·개인 파일·모델 ZIP은 공개하지 않습니다. 개인 설치용 앱이며 실물 기기 검증 범위는 제한됩니다.
